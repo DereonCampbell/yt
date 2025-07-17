@@ -1,0 +1,9 @@
+# Module 4 - Exercise 1 Flowcharting - Dereon Campbell
+
+_This file is a placeholder for the flowchart. Please see the attached PDF/PNG for the actual flowchart._
+
+## Steps Modeled:
+1. Input minutes used, texts sent.
+2. Compute overages if any.
+3. Calculate all charges (base, overages, 911 fee, tax).
+4. Output final bill with breakdown.
