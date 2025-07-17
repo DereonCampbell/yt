@@ -1,0 +1,146 @@
+// This pseudocode is intended to determine whether students have
+// passed or failed a course; student needs to average 60 or
+// more on two tests.
+
+start
+   Declarations
+      num firstTest
+      num secondTest
+      num average
+      num PASSING = 60
+   output "Enter first score or 0 to quit "
+   input firstTest
+   while firstTest <> 0
+      output "Enter second score "
+      input secondTest
+      average = (firstTest + secondTest) / 2
+      output "Average is ", average
+      if average >= PASSING then
+         output "Pass"
+      else
+         output "Fail"
+      endif
+      output "Enter first score or 0 to quit "
+      input firstTest
+   endwhile
+stop
+
+// Answers to the questions:
+
+// Question: You have been tasked with reviewing and updating this program. What steps would you take to identify any issues in the code?
+// Your Response:
+// 1. Review variable declarations for correct spelling and initialization.
+// 2. Check for missing input or output statements.
+// 3. Evaluate the logic of loops and conditions.
+// 4. Test the pseudocode using sample data to verify expected outcomes.
+// 5. Confirm arithmetic expressions are correctly parenthesized.
+// 6. Ensure all branches (if-else) have correct outputs.
+// 7. Review for proper flow of data and user prompts.
+// 8. Validate termination conditions (loop exit is clear).
+
+// Question: What actions could the developer have taken to minimize the number of errors?
+// Your Response:
+// 1. Use clear, consistent variable naming throughout the code.
+// 2. Add comments and documentation for clarity.
+// 3. Use indentation to highlight structure.
+// 4. Test each code section with sample data.
+// 5. Peer review or walkthrough with another developer.
+// 6. Use modular design for reusable code.
+// 7. Follow a checklist for common errors (e.g., missing input, uninitialized variables).
+// 8. Use version control to track and revert changes as needed.// This pseudocode is intended to display employee net pay values.
+// All employees have a standard $45 deduction from their checks.
+// If an employee does not earn enough to cover the deduction
+// an error message is displayed.
+
+start
+   Declarations
+      string name
+      num hours
+      num rate
+      num DEDUCTION = 45
+      string EOFNAME = "ZZZ"
+      num gross
+      num net
+   output "Enter first name or ", EOFNAME, " to quit"
+   input name
+   while name <> EOFNAME
+      output "Enter hours worked for ", name
+      input hours
+      output "Enter hourly rate for ", name
+      input rate
+      gross = hours * rate
+      net = gross - DEDUCTION
+      if net > 0 then
+         output "Net pay for ", name, " is ", net
+      else
+         output "Deductions not covered. Net is 0."
+      endif
+      output "Enter next name or ", EOFNAME, " to quit"
+      input name
+   endwhile
+   output "End of job"
+stop// This pseudocode is intended to determine whether students have
+// passed or failed a course; student needs to average 60 or
+// more on two tests.
+
+start
+   Declarations
+      num firstTest
+      num secondTest
+      num average
+      num PASSING = 60
+   output "Enter first score or 0 to quit "
+   input firstTest
+   while firstTest <> 0
+      output "Enter second score "
+      input secondTest
+      average = (firstTest + secondTest) / 2
+      output "Average is ", average
+      if average >= PASSING then
+         output "Pass"
+      else
+         output "Fail"
+      endif
+      output "Enter first score or 0 to quit "
+      input firstTest
+   endwhile
+stop// This pseudocode segment is intended to compute and display
+// the cost of home ownership for any number of users
+// The program ends when a user enters 0 for the mortgage payment
+
+start
+   Declarations
+      num mortgagePayment
+      num utilities
+      num taxes
+      num upkeep
+      num total
+   startUp()
+   while mortgagePayment <> 0
+      mainLoop()
+   endwhile
+   finishUp()
+stop
+
+startUp()
+   output "Enter your mortgage payment or 0 to quit"
+   input mortgagePayment
+return
+
+mainLoop()
+   output "Enter utilities"
+   input utilities
+   output "Enter taxes"
+   input taxes
+   output "Enter amount for upkeep"
+   input upkeep
+   total = mortgagePayment + utilities + taxes + upkeep
+   output "Total is ", total
+   // Prompt for new mortgagePayment to continue or exit loop
+   output "Enter your mortgage payment or 0 to quit"
+   input mortgagePayment
+return
+
+finishUp()
+   output "End of program"
+return
