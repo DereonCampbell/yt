@@ -1,0 +1,50 @@
+start
+    Declarations
+        num SIZE = 10
+        num MAX = 6
+        string name
+        num scores[SIZE]
+        num x
+        num y
+        num temp
+        num total
+        num COMPS = SIZE - 1
+
+    output "Enter student name:"
+    input name
+
+    fillArray()
+    sortArray()
+    displayTotal()
+stop
+
+fillArray()
+    for x = 0 to SIZE - 1
+        output "Enter score ", x + 1
+        input scores[x]
+    endfor
+return
+
+sortArray()
+    for x = 0 to COMPS - 1
+        for y = 0 to COMPS - x - 1
+            if scores[y] > scores[y + 1] then
+                swap(scores[y], scores[y + 1])
+            endif
+        endfor
+    endfor
+return
+
+swap(num a, num b)
+    temp = a
+    a = b
+    b = temp
+return
+
+displayTotal()
+    total = 0
+    for x = SIZE - MAX to SIZE - 1
+        total = total + scores[x]
+    endfor
+    output name, "'s total of top 6 quizzes: ", total
+return
